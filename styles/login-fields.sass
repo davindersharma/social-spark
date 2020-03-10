@@ -1,0 +1,88 @@
+form.signIn,form.signUp
+    .field-container
+        width: 100%
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2)
+        height: 44px
+        display: flex
+        align-items: center
+        margin: auto
+        margin-top: 20px
+        max-width: 300px
+        &:hover
+            border-bottom: 2px solid $color-dark
+
+        input
+            display: inline-block
+            font-size: 18px
+            font-weight: bold
+            border: 0
+            box-sizing: border-box
+            color: $color-dark
+            outline: 0
+            height: 100%
+            width: 100%
+            &::placeholder
+                color: rgba(0, 0, 0, 0.24)
+
+    h2
+        text-align: center
+        font-size: 16px
+        color: rgba(0, 0, 0, 0.24)
+        margin-bottom: 35px
+        &:hover
+            text-decoration: underline
+
+    button
+        font-size: 20px
+        font-weight: bold
+        width: 100%
+        max-width: 300px
+        height: 60px
+        border-radius: 14px
+        color: $color-dark
+        margin: 14px auto
+        display: block
+        outline: 0
+        border: 0
+        background: linear-gradient(180deg, #FFB74D, #FF9800)
+        color: #fff
+        transition: .6s
+        &:focus
+            outline: 0
+        &:before
+            content: ''
+            display: block
+            position: absolute
+            background: rgba(255,255,255,0.5)
+            width: 60px
+            height: 100%
+            left: 0
+            top: 0
+            opacity: .5
+            filter: blur(30px)
+            transform: translateX(-100px)  skewX(-15deg)
+
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            background: rgba(255,255,255,0.2)
+            width: 30px
+            height: 100%
+            left: 30px
+            top: 0
+            opacity: 0
+            filter: blur(5px)
+            transform: translateX(-100px) skewX(-15deg)
+
+        &:hover
+            // cursor: pointer
+            &:before
+                transform: translateX(400px)  skewX(-15deg)
+                opacity: 0.6
+                transition: .7s
+
+            &:after
+                transform: translateX(400px) skewX(-15deg)
+                opacity: 1
+                transition: .7s
